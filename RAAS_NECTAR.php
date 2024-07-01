@@ -405,7 +405,7 @@ class RAAS_NECTAR extends \ExternalModules\AbstractExternalModule {
 		
 		if ($this->user === true || empty($this->user->dashboard)) {
 			if (empty($this->user) ){
-				$this->user = new stdClass();
+				$this->user = new \stdClass();
 			}
 
 			$this->user->authorized = false;
