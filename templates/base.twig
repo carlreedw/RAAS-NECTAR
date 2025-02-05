@@ -3,14 +3,12 @@
 <head>
 	{% block head %}
 		<link rel="stylesheet" href="{{ constant('APP_PATH_WEBPACK') }}css/bundle.css" />
-		{% if(constant("CSS_PATH_1")) %}
-		<link rel="stylesheet" href="{{ constant("CSS_PATH_1") }}" />
-		{% endif %}
+		<link rel="stylesheet" href="{{ css_path_1 }}" />
 
 		<script type="text/javascript" src="{{ constant('APP_PATH_WEBPACK') }}js/bundle.js"></script>
 		<script type="text/javascript" src="{{ constant('APP_PATH_JS') }}Libraries/bundle.js"></script>
 		<script type="text/javascript" src="{{ constant('APP_PATH_JS') }}base.js"></script>
-		<script type="text/javascript" src="{{ constant("JS_PATH_1") }}"></script>
+		<script type="text/javascript" src="{{ js_path_1 }}"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0/dist/chartjs-plugin-datalabels.min.js"></script>
@@ -53,7 +51,7 @@
 		<div class='row'>
 			<div class="col-sm-6 col-logo">
 				<a href="">
-					<img class="mlogo" style="max-height: 125px;" src="{{ constant("LOGO_LINK") }}">
+					<img class="mlogo" style="max-height: 125px;" src="{{ logo_link }}">
 				</a>
 			</div>
 			<div class="col-sm-6 col-logo col-logo-right"><a href="" target="_blank"></a></div>
