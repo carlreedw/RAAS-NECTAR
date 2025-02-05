@@ -1,6 +1,8 @@
 <?php
 define("SCREENING_LOG_DATA_AJAX_URL", $module->getUrl('ajax/getScreeningLogData.php'));
 define("ENROLLMENT_CHART_DATA_AJAX_URL", $module->getUrl('ajax/getEnrollmentChartData.php'));
+
+require_once(__DIR__."/vendor/autoload.php");
 $loader = new \Twig\Loader\FilesystemLoader(__DIR__."/templates");
 $twig = new \Twig\Environment($loader);
 
@@ -48,5 +50,8 @@ echo $template->render([
 	"folderImageSource" => $folderImageSource,
 	"siteStartupData" => $siteStartupData,
     "siteCompletionData" => $siteCompletionData,
-    'randArmLabels' => $randArmlabels
+    'randArmLabels' => $randArmlabels,
+	"css_path_1" => $module->getUrl("css/style.css"),
+	"js_path_1" => $module->getUrl("js/dashboard.js"),
+	"logo_link" => $module->getUrl("images/nectar_logo.png")
 ]);
